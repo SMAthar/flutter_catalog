@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
       await Navigator.pushNamed(context, MyRoute.homeRoute);
       setState(() {
         changeButton = false;
-      });
+      }); 
     }
   }
 
@@ -123,15 +123,6 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    // ElevatedButton(
-                    //   onPressed: () {
-                    //     Navigator.pushNamed(context, MyRoute.homeRoute);
-                    //   },
-                    //   child: Text("Login"),
-                    //   style: ElevatedButton.styleFrom(
-                    //     minimumSize: Size(150, 40),
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
