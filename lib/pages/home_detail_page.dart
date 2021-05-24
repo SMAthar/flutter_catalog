@@ -61,6 +61,7 @@ class HomeDetailsPage extends StatelessWidget {
                       "For chamber thereat a oh said. The myself yore sign marvelled god visiter he nevermore beast. It chamber said shore and visiter this tis. Floor oer something is books tis floor, if as raven stopped of of its rare chamber. Ever my nevermore this all lenore my. A the maiden."
                           .text
                           .textStyle(context.captionStyle)
+                          .justify
                           .make()
                           .p16(),
                     ],
