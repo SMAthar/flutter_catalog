@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
@@ -28,6 +29,7 @@ class CatalogItem extends StatelessWidget {
                 catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
                 catalog.desc.text.textStyle(context.captionStyle).make(),
                 ButtonBar(
+                  buttonPadding: EdgeInsets.zero,
                   alignment: MainAxisAlignment.spaceBetween,
                   children: [
                     "\$${catalog.price}".text.bold.xl.make(),
@@ -37,10 +39,11 @@ class CatalogItem extends StatelessWidget {
                         primary: MyTheme.darkBluishColor,
                       ),
                       onPressed: () {},
-                      child: 'Buy'.text.make(),
+                      // child: 'Add to cart'.text.make(),
+                      child: Icon(CupertinoIcons.cart_badge_plus),
                     )
                   ],
-                ),
+                ).pOnly(right: 8.0),
               ],
             ),
           ),

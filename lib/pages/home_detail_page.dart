@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
@@ -13,7 +14,7 @@ class HomeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyTheme.creamColor,
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.transparent),
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
@@ -26,7 +27,8 @@ class HomeDetailsPage extends StatelessWidget {
                 primary: MyTheme.darkBluishColor,
               ),
               onPressed: () {},
-              child: 'Buy'.text.make(),
+              // child: 'Buy'.text.make(),
+              child: Icon(CupertinoIcons.cart_badge_plus),
             ).wh(100, 50)
           ],
         ),
@@ -55,7 +57,12 @@ class HomeDetailsPage extends StatelessWidget {
                       catalog.desc.text
                           .textStyle(context.captionStyle)
                           .xl
+                          .make(),
+                      "For chamber thereat a oh said. The myself yore sign marvelled god visiter he nevermore beast. It chamber said shore and visiter this tis. Floor oer something is books tis floor, if as raven stopped of of its rare chamber. Ever my nevermore this all lenore my. A the maiden."
+                          .text
+                          .textStyle(context.captionStyle)
                           .make()
+                          .p16(),
                     ],
                   ).py64(),
                 ),
