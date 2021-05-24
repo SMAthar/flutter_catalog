@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -21,14 +22,14 @@ class _LoginPageState extends State<LoginPage> {
       await Navigator.pushNamed(context, MyRoute.homeRoute);
       setState(() {
         changeButton = false;
-      }); 
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.canvasColor,
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -95,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Material(
                       elevation: 1,
-                      color: Colors.deepPurple,
+                      color: context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
